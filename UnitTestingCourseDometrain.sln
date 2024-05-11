@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Fundamentals", "1-Fundamentals", "{61591EE7-6EE6-4210-A8CB-AEDDE545D7B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{202AA007-60A2-4E8D-A31F-48A7307D2840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibrary", "1-Fundamentals\src\CalculatorLibrary\CalculatorLibrary.csproj", "{39B952E0-6BFD-4BD0-B806-7F192C398E62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{04A783DA-D82F-4928-A005-83314A02403C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibrary.Tests.Unit", "1-Fundamentals\test\CalculatorLibrary.Tests.Unit\CalculatorLibrary.Tests.Unit.csproj", "{0B1428C1-9329-48AC-A51C-8BE7D351ACCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39B952E0-6BFD-4BD0-B806-7F192C398E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B952E0-6BFD-4BD0-B806-7F192C398E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B952E0-6BFD-4BD0-B806-7F192C398E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B952E0-6BFD-4BD0-B806-7F192C398E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1428C1-9329-48AC-A51C-8BE7D351ACCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1428C1-9329-48AC-A51C-8BE7D351ACCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1428C1-9329-48AC-A51C-8BE7D351ACCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1428C1-9329-48AC-A51C-8BE7D351ACCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{202AA007-60A2-4E8D-A31F-48A7307D2840} = {61591EE7-6EE6-4210-A8CB-AEDDE545D7B4}
+		{39B952E0-6BFD-4BD0-B806-7F192C398E62} = {202AA007-60A2-4E8D-A31F-48A7307D2840}
+		{04A783DA-D82F-4928-A005-83314A02403C} = {61591EE7-6EE6-4210-A8CB-AEDDE545D7B4}
+		{0B1428C1-9329-48AC-A51C-8BE7D351ACCE} = {04A783DA-D82F-4928-A005-83314A02403C}
+	EndGlobalSection
+EndGlobal
