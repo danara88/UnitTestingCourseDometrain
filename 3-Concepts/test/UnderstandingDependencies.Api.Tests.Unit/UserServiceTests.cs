@@ -21,7 +21,7 @@ public class UserServiceTests
     }
 
     [Fact]
-    public async void GetAllAsync_ShouldReturnEmptyList_WhenNoUsersExist()
+    public async Task GetAllAsync_ShouldReturnEmptyList_WhenNoUsersExist()
     {
         // Arrange
         _userRepository.GetAllAsync().Returns(Array.Empty<User>());
@@ -32,7 +32,7 @@ public class UserServiceTests
     }
 
     [Fact]
-    public async void GetAllAsync_ShouldReturnAListOfUsers_WhenUsersExists()
+    public async Task GetAllAsync_ShouldReturnAListOfUsers_WhenUsersExists()
     {
         // Arrange
         var expectedUsers = new []
