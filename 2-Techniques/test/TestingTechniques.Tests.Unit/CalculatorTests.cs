@@ -1,3 +1,4 @@
+using System.Collections;
 using FluentAssertions;
 using Xunit;
 
@@ -25,9 +26,7 @@ public class CalculatorTests
     private readonly Calculator _sut = new(); // sut = System Under Test
 
     [Theory]
-    [InlineData(5, 5, 10)]
-    [InlineData(-5, 5, 0)]
-    [InlineData(-15, -5, -20)]
+    [MemberData(nameof(AddTestData))]
     public void Add_ShouldAddTwoNumbers_WhenTwoNumbersAreIntegers(int a, int b, int expected)
     {
         // Act
@@ -37,11 +36,7 @@ public class CalculatorTests
     }
 
     [Theory]
-    [InlineData(5, 5, 0)]
-    [InlineData(15, 5, 10)]
-    [InlineData(-5, -5, 0)]
-    [InlineData(-15, -5, -10)]
-    [InlineData(5, 10, -5)]
+    [ClassData(typeof(CalculatorSubtractTestData))]
     public void Add_ShouldSubstractTwoNumbers_WhenTwoNumbersAreIntegers(int a, int b, int expected)
     {
         // Act
@@ -72,4 +67,26 @@ public class CalculatorTests
         // Assert
         result.Should().Be(expected);
     }
+
+    public static IEnumerable<object[]> AddTestData => new List<object[]>
+    {
+        new object[] { 5, 5, 10 },
+        new object[] { -5, 5, 0 },
+        new object[] { -15, -5, -20 }
+    };
+}
+
+// Class data specially designed to return dynamically all the parameters needed for the test
+public class CalculatorSubtractTestData : IEnumerable<object[]>
+{
+    public IEnumerator<object[]> GetEnumerator()
+    {
+        yield return new object[] { 5, 5, 0 };
+        yield return new object[] { 15, 5, 10 };
+        yield return new object[] { -5, -5, 0 };
+        yield return new object[] { -15, -5, -10 };
+        yield return new object[] { 5, 10, -5 };
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
